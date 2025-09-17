@@ -20,7 +20,7 @@ export async function migrate100(context, oldVersion): Promise<void> {
   }
 
   const mods: { [modId: string]: types.IMod } = util.getSafe(state,
-    ['persistent', 'mods', da2Game.id], {});
+                                                             ['persistent', 'mods', da2Game.id], {});
   const addins = Object.values(mods).filter(mod => mod.type === 'dazip');
 
   if (addins.length === 0) {

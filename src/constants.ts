@@ -23,7 +23,7 @@ export const DA_GAMES: { [gameName: string]: IDAGame } = {
       return (discovery?.path)
         ? path.join(discovery.path, 'addins')
         : path.join(util.getVortexPath('documents'), 'BioWare',
-            'Dragon Age 2'/*, 'packages', 'core', 'override'*/);
+                    'Dragon Age 2'/*, 'packages', 'core', 'override'*/);
     },
   },
 };

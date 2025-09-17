@@ -66,11 +66,11 @@ function installOuter(files: string[],
   const dazips = files.filter(file => !file.endsWith(path.sep) && path.extname(file) === '.dazip');
   log('debug', 'install nested', dazips);
   const instructions = dazips.map((dazip: string): types.IInstruction => ({
-                              type: 'submodule',
-                              key: dazip,
-                              path: path.join(destinationPath, dazip),
-                              submoduleType: 'dazip',
-                            }));
+    type: 'submodule',
+    key: dazip,
+    path: path.join(destinationPath, dazip),
+    submoduleType: 'dazip',
+  }));
   return Promise.resolve({ instructions });
 }
 
